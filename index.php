@@ -51,6 +51,8 @@
                         <a href="?do=login">會員登入</a>
                         <?php else:?>
                         歡迎,<?=$_SESSION['user'];?><br>
+
+
                         <button onclick="location.href='admin.php'">管理</button>|
                         <button onclick="logout()">登出</button>
                         <?php endif;?>
@@ -76,6 +78,7 @@
             服務信箱：health@test.labor.gov.tw<img src="./icon/02B02.jpg" width="45">
         </div>
     </div>
+
 
 </body>
 
