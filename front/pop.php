@@ -1,3 +1,17 @@
+<style>
+.detial {
+    background: rgba(51, 51, 51, 0.8);
+    color: #FFF;
+    min-height: 100px;
+    width: 300px;
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    overflow: auto;
+
+
+}
+</style>
 <fieldset>
     <legend>目前位置：首頁 > 人氣文章區</legend>
     <table style="width: 100%;">
@@ -17,7 +31,12 @@
         ?>
         <tr>
             <td><?=$row['title'];?></td>
-            <td><?=mb_substr($row['news'],0,25);?>...</td>
+            <td>
+                <span class='title'> <?=mb_substr($row['news'],0,25);?>...</span>
+            </td>
+            <td>
+                <span class='detail'><?=nl2br($row['news'],0,25);?>...</span>
+            </td>
             <td>
                 <?php 
                 if(isset($_SESSION['user'])){
